@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import Header from './app/components/Header'
 import Input from './app/components/Input'
 import SubTitle from './app/components/SubTitle'
+import TodoItem from './app/components/Todo'
 
 export default class App extends React.Component {
   render() {
@@ -12,8 +13,13 @@ export default class App extends React.Component {
             <Header/>
         </View>
         <View style={styles.inputContainer}>
-          <SubTitle/>
+          <SubTitle title="To-Do 입력"/>
           <Input/>
+        </View>
+        <View style={styles.inputContainer}>
+          <SubTitle title="To-Do List"/>
+          <TodoItem/>
+          <TodoItem/>
         </View>
     </View>
     )
